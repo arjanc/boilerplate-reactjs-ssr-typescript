@@ -2,12 +2,13 @@ import { Request } from 'express';
 import * as React from "react";
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
 import Routes from './../../client/Routes';
 
 export default (req: Request) => {
   const content = renderToString(
     <StaticRouter location={req.path} context={{}}>
-      <Routes />
+      <div>{renderRoutes(Routes)}</div>
     </StaticRouter>
   );
 

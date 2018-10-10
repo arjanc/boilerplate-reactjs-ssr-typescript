@@ -1,17 +1,41 @@
 import * as express from 'express';
 import * as compression from 'compression';
+// import {MatchedRoute, matchRoutes} from 'react-router-config';
+// import Routes, { IRouteObject } from '../client/Routes';
 import renderer from './helpers/renderer';
 
 const app = express();
 const port = 5001;
 
+// interface IMatchedRoute extends MatchedRoute<any> {
+//   route: IRouteObject;
+// };
+
 app.use(compression());
 
 app.use(express.static('public'));
 
+app.use((req, res) => {
+  res.status(200);
+  res.send(renderer(req));
+  res.end();
+});
+
+/*
+// Attempt UNO
+// Dit was met een call naar een functie op elk component die de data ging ophalen.
+// Daarvoor gaan de GraphQL gebruiken.
+//
 app.get('*', (req: express.Request, res: express.Response) => {
+
+  matchRoutes(Routes, req.path).map(( { route }:IMatchedRoute ) => {
+    route.loadData ? route.loadData() : null;
+  });
+
   res.send(renderer(req));
 });
+*/
+
 
 /*
 // catch 404 and forward to error handler

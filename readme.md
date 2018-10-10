@@ -27,3 +27,7 @@ $ npm run dev
 #Structuur
 De client code wordt gebundeld en in de ```public``` folder geplaatst.
 De server code wordt ook gebundeld en in de ```build``` map gezet en zodra deze ```bundle.js``` wordt aangepast start de nodeJS server opnieuw op.
+
+## sources
+- [Medium article from @francesco](https://medium.com/@francesco.agnoletto/how-to-set-up-typescript-with-babel-and-webpack-6fba1b6e72d5)
+- [Github project of another boilerplate](https://github.com/Kornil/simple-ts-react-app)

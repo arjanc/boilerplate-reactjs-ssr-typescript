@@ -9,22 +9,18 @@ module.exports = {
   // Tell webpack to run babel on every file it runs through
   module: {
     rules: [
-      // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
-      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
-      // {
-      //   test: /\.js?$/,
-      //   loader: 'babel-loader',
-      //   exclude: /node_modules/,
-      //   options: {
-      //     presets: [
-      //       'react',
-      //       'stage-0',
-      //       ['env', { targets: { browsers: ['last 2 versions'] } }]
-      //     ]
-      //   }
-      // },
+      // All files with a '.ts' or '.tsx' extension will be handled by 'babel'.
+      {
+        test: /\.tsx?$/,
+        loader: "babel-loader"
+      },
+      {
+        test: /\.js$/,
+        use: ["source-map-loader"],
+        enforce: "pre"
+      }
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+      //{ enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
     ]
   },
 

@@ -12,10 +12,10 @@ export default (req: Request) => {
   const content = renderToString(
     sheet.collectStyles(
       <StaticRouter location={req.path} context={{}}>
-        <div>
+        <React.Fragment>
           <GlobalStyle />
           {renderRoutes(Routes)}
-        </div>
+        </React.Fragment>
       </StaticRouter>
     )
   );
@@ -37,7 +37,7 @@ export default (req: Request) => {
         <!--[if lt IE8]>
         <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browserhappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-            <div id="root">${content}</div>
+            ${content}
             <script src="bundle.js"></script>
         </body>
     </html>

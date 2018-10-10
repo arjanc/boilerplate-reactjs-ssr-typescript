@@ -5,11 +5,11 @@ Ook wordt er gebruik gemaakt van Server Side Rendering (SSR) zodat content snel 
 # Technieken
 * ReactJS
 * TypeScript
-* Redux
 * GraphQL
 * NodeJS
 * ExpressJS
 * Webpack
+* BabelJS
 
 # Runnen
 ### Initializeren
@@ -31,3 +31,5 @@ De server code wordt ook gebundeld en in de ```build``` map gezet en zodra deze 
 ## sources
 - [Medium article from @francesco](https://medium.com/@francesco.agnoletto/how-to-set-up-typescript-with-babel-and-webpack-6fba1b6e72d5)
 - [Github project of another boilerplate](https://github.com/Kornil/simple-ts-react-app)
+- [SSR styled-components](https://medium.com/styled-components/the-simple-guide-to-server-side-rendering-react-with-styled-components-d31c6b2b8fbf)
+- [Setup Typescript with Babel and Webpack](https://medium.com/@francesco.agnoletto/how-to-set-up-typescript-with-babel-and-webpack-6fba1b6e72d5)

@@ -4,11 +4,15 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import Routes from './../../client/Routes';
+import GlobalStyle from './../../client/GlobalStyle';
 
 export default (req: Request) => {
   const content = renderToString(
     <StaticRouter location={req.path} context={{}}>
-      <div>{renderRoutes(Routes)}</div>
+      <div>
+        <GlobalStyle />
+        {renderRoutes(Routes)}
+      </div>
     </StaticRouter>
   );
 

@@ -1,3 +1,5 @@
+const Path = require('path');
+
 module.exports = {
   mode: 'production',
 
@@ -18,6 +20,11 @@ module.exports = {
         test: /\.js$/,
         use: ["source-map-loader"],
         enforce: "pre"
+      },
+      {
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        include: [Path.join(__dirname, "src/client/assets")],
+        loader: "file-loader?name=assets/[name].[ext]"
       }
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       //{ enforce: "pre", test: /\.js$/, loader: "source-map-loader" }

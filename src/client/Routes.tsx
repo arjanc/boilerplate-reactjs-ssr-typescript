@@ -1,22 +1,11 @@
 import * as React from 'react';
-import Home from './components/Home';
+import Home from './pages/home';
 import { RouteConfig } from 'react-router-config';
-// import { Route } from 'react-router-dom';
 
 
 const Hi = () => (
   <span>Hi</span>
 );
-
-// export interface IRouteObject {
-//   loadData?: () => void;
-//   path?: string;
-//   component?: any | {};
-//   exact?: boolean;
-// }
-// export interface IRouteObject extends RouteConfig {
-//   loadData?: () => void;
-// };
 
 const routes: RouteConfig[] = [
   {

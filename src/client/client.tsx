@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import Routes from './Routes';
-import GlobalStyle from './GlobalStyle';
+import GlobalStyle from './globalStyle';
 
 
 ReactDOM.hydrate(

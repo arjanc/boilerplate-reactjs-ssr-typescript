@@ -5,7 +5,7 @@ import { StaticRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import { ServerStyleSheet } from 'styled-components';
 import Routes from './../../client/Routes';
-import GlobalStyle from './../../client/GlobalStyle';
+import GlobalStyle from '../../client/globalStyle';
 
 export default (req: Request) => {
   const sheet = new ServerStyleSheet();

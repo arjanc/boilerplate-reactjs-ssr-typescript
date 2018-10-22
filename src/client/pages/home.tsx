@@ -1,8 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { media } from './../utils/StyleUtils';
 import { BigTitle } from '../ui/bigTitle';
 import { PreTitle } from '../ui/preTitle';
 import Icon from '../ui/icon';
+import Logo from '../ui/logo';
 
 const FrontPageWrapper = styled.article`
   display: flex;
@@ -30,23 +32,30 @@ const TitleContainer = styled.div`
   display: inline-block;
   margin: 0 auto;
   text-align: left;
+  
+  transition: padding 500ms;
+  
+  ${media.tablet`
+    padding-left: 100px;
+  `}
 `;
 
 export const Home = () => {
-  return (
-    <FrontPageWrapper>
-      <FrontPageMain>
-        <TitleContainer>
-          <PreTitle>Passionate</PreTitle>
-          <BigTitle>Front-end<br/>developer</BigTitle>
-          <button onClick={() => console.log('Hi there!')}>Press Me!</button>
-        </TitleContainer>
-      </FrontPageMain>
-      <FrontPageFooter>
-        <Icon name='big-arrow' color='#000000' size={48} />
-      </FrontPageFooter>
-    </FrontPageWrapper>
-  );
+    return (
+        <FrontPageWrapper>
+            <FrontPageMain>
+                <Logo />
+                <TitleContainer>
+                    <PreTitle>Passionate</PreTitle>
+                    <BigTitle>Front-end<br/>developer</BigTitle>
+                    <button onClick={() => console.log('Hi there!')}>Press Me!</button>
+                </TitleContainer>
+            </FrontPageMain>
+            <FrontPageFooter>
+                <Icon name='big-arrow' color='#000000' size={48} />
+            </FrontPageFooter>
+        </FrontPageWrapper>
+    );
 };
 
 export default Home;

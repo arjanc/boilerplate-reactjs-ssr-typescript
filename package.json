@@ -53,6 +53,6 @@
     "file-loader": "^2.0.0",
     "source-map-loader": "^0.2.4",
     "typescript": "^2.9.2",
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.3.12"
   }
 }
